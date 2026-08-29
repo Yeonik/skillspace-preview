@@ -1,3 +1,4 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Skill Space · версия в манере Mindspace</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -245,7 +246,7 @@ label.f{display:block;font-size:13px;font-weight:600;color:var(--ink);margin:16p
 <div class="proto-bar">Экспериментальная версия <b>«в манере mindspace.me»</b> · палитра и приёмы сняты с их главной · контент Skill Space · основной прототип остаётся прежним</div>
 
 <header class="site clear" id="hdr">
-  <a class="logo" href="#"><b>SKILLSPACE</b><span class="rule"></span><span>ІСКЕРЛІК КЕҢІСТІК · ДЕЛОВОЕ ПРОСТРАНСТВО</span></a>
+  <a class="logo" href="#"><b>SKILLSPACE</b><span class="rule"></span><span><i class="kk">ІСКЕРЛІК КЕҢІСТІК</i><i class="mid"> · </i><i class="ru">ДЕЛОВОЕ ПРОСТРАНСТВО</i></span></a>
   <nav class="top"><a href="#formats">Форматы</a><a href="#rates">Тарифы</a><a href="#events">Афиша</a><a href="#booking">Контакты</a></nav>
   <a class="pill" href="#booking">Забронировать зал</a>
 </header>
@@ -734,3 +735,38 @@ document.getElementById("send").onclick=function(){ alert("Прототип: н�
 recalc();
 
 </script>
+
+
+<style id="mobile-fix">
+/* мобильные правки, август 2026 */
+@media (max-width:1000px){
+  header.site nav.top{display:none!important}
+  header.site{padding-left:18px!important;padding-right:18px!important}
+}
+
+@media (max-width:680px){
+  header.site{padding:12px 14px!important;gap:10px!important}
+  header.site .logo i{font-style:normal}
+  header.site .logo .mid{display:none}
+  header.site .logo .kk,header.site .logo .ru{display:block;line-height:1.4}
+  header.site .logo b{font-size:19px!important}
+  header.site .btn,header.site .pill{font-size:12.5px!important;padding:10px 16px!important;white-space:nowrap}
+  section{padding-left:16px!important;padding-right:16px!important}
+  .wrap{padding-left:0!important;padding-right:0!important}
+  .book .wrap,.book-grid,.wrap{grid-template-columns:minmax(0,1fr)!important}
+  .card,.summary,aside.summary,.step{padding-left:16px!important;padding-right:16px!important}
+  footer.site .top,footer .top{grid-template-columns:1fr!important}
+  .pr small,small{white-space:normal}
+  table{width:100%;table-layout:fixed}
+  table.simple td,table.simple th,table td,table th{overflow-wrap:anywhere;word-break:break-word;white-space:normal!important;font-size:13.5px}
+  img,svg,video{max-width:100%}
+  .video-chip{top:92px!important;font-size:12px!important}
+  }
+@media (max-width:359px){
+  header.site .btn,header.site .pill{font-size:11px!important;padding:8px 11px!important}
+  header.site .logo b{font-size:17px!important}
+  header.site .logo .kk,header.site .logo .ru{font-size:6.8px!important;letter-spacing:.12em!important}
+  footer.site{padding-left:14px!important;padding-right:14px!important}
+}
+</style>
+</body></html>
