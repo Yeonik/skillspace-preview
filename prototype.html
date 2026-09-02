@@ -1006,7 +1006,10 @@ function drawMonth(){
       CAL_SEL=[CAL_Y,CAL_M,d];
       var inp=document.getElementById("date");
       if(inp){ inp.value=CAL_Y+"-"+String(CAL_M+1).padStart(2,"0")+"-"+String(d).padStart(2,"0");
-               if(typeof recalc==="function") recalc(); }
+               /* поле хранит дату в state, а не читается расчётом напрямую —
+                  поэтому дёргаем штатный обработчик, а не recalc() вручную */
+               if(typeof inp.onchange==="function") inp.onchange();
+               inp.dispatchEvent(new Event("change",{bubbles:true})); }
       drawMonth(); drawDayPanel(CAL_Y,CAL_M,d);
     });
   });
